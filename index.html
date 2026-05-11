@@ -10,46 +10,55 @@
         nav { background: #000; padding: 20px; text-align: center; border-bottom: 2px solid var(--gold); position: sticky; top: 0; z-index: 100; }
         nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
         nav a:hover { color: var(--gold); }
-        .hero { height: 400px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/hero-bg.jpg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; border-bottom: 3px solid var(--gold); text-align: center; }
-        .hero h1 { color: var(--gold); font-size: 2.5rem; margin: 0; }
-        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
-        .section { background: var(--card); padding: 30px; border-radius: 15px; border-left: 5px solid var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        h2 { color: var(--gold); }
+        
+        .hero { height: 350px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)); display: flex; flex-direction: column; justify-content: center; align-items: center; border-bottom: 3px solid var(--gold); text-align: center; }
+        .hero h1 { color: var(--gold); font-size: 2.8rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Расширенный контейнер для большого изображения */
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        
+        .section { background: var(--card); padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); text-align: center; }
+        
+        /* Стили для capture1 */
+        .main-capture { 
+            width: 100%; 
+            max-width: 1177px; 
+            height: auto; 
+            border: 1px solid var(--gold); 
+            padding: 10px; 
+            background: #000;
+            border-radius: 5px;
+            margin-top: 30px;
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.3);
+        }
+
+        h2 { color: var(--gold); font-size: 2rem; }
         .site-footer { background: #000; color: #888; padding: 40px 20px; margin-top: 60px; border-top: 1px solid var(--gold); text-align: center; }
         .footer-content { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; }
-        .footer-section h3 { color: var(--gold); font-size: 1rem; }
-        .footer-section a { color: #888; text-decoration: none; }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Главная</a> <a href="about.html">О проекте</a> <a href="team.html">Участники</a> <a href="journal.html">Журнал</a> <a href="resources.html">Ресурсы</a>
+        <a href="index.html" style="color: var(--gold);">Главная</a> <a href="about.html">О проекте</a> <a href="team.html">Участники</a> <a href="journal.html">Журнал</a> <a href="resources.html">Ресурсы</a>
     </nav>
     <header class="hero">
         <h1>Проектирование и изготовление рам</h1>
-        <p>Сохранение истории с помощью 3D-технологий</p>
+        <p>Московский Политехнический Университет</p>
     </header>
     <div class="container">
         <div class="section">
             <h2>Аннотация проекта</h2>
-            <p>Наш проект объединяет классическое искусство и современные технологии. Мы создаем высокоточные цифровые копии музейных рам, сохраняя каждую деталь их рельефа для будущих поколений.</p>
-            <img src="img/frame-detail.jpg" style="width:100%; border-radius:10px; margin-top:20px; border:1px solid #333;" alt="Рама">
+            <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto 30px;">Сочетание классического искусства и технологий 3D-сканирования для создания точных цифровых архивов и физических реплик картинных рам.</p>
+            
+            <!-- Ваше изображение capture1 -->
+            <img src="capture1.jpg" class="main-capture" alt="3D сканирование рамы - Основной вид">
         </div>
     </div>
     <footer class="site-footer">
         <div class="footer-content">
-            <div class="footer-section">
-                <h3>Московский Политех</h3>
-                <p>Проектная деятельность</p>
-            </div>
-            <div class="footer-section">
-                <p>📍 Б. Семёновская, 38</p>
-                <p>📞 <a href="tel:+74952230523">+7 (495) 223-05-23</a></p>
-                <p>✉️ <a href="mailto:mospolytech@mospolytech.ru">mospolytech@mospolytech.ru</a></p>
-            </div>
+            <div class="footer-section"><h3>Московский Политех</h3><p>📍 Б. Семёновская, 38</p></div>
+            <div class="footer-section"><p>📞 +7 (495) 223-05-23</p><p>✉️ mospolytech@mospolytech.ru</p></div>
         </div>
     </footer>
 </body>
 </html>
-
-
