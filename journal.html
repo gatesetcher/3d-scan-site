@@ -3,34 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Журнал | 3D Рамы</title>
-    <link href="https://jsdelivr.net" rel="stylesheet">
+    <style>
+        /* Стили те же, что и выше */
+        :root { --gold: #c5a059; --dark: #121212; --card: #1e1e1e; --text: #e0e0e0; }
+        body { background-color: var(--dark); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; }
+        nav { background: #000; padding: 15px; text-align: center; border-bottom: 2px solid var(--gold); }
+        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: bold; }
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .news-card { background: var(--card); margin-bottom: 30px; padding: 25px; border-radius: 15px; border: 1px solid #333; position: relative; overflow: hidden; }
+        .news-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--gold); }
+        .date { color: var(--gold); font-size: 0.9rem; margin-bottom: 10px; display: block; }
+        h2 { margin-top: 0; color: #fff; }
+    </style>
 </head>
 <body>
-    <div class="container my-5">
-        <h1 class="mb-4">Журнал проекта</h1>
-        
-        <div class="card mb-4 border-primary">
-            <div class="card-body">
-                <h5 class="card-title text-primary">Успешная защита проекта на итоговой аттестации</h5>
-                <p class="text-muted small">Дата: Май 2024</p>
-                <p>Команда представила результаты годовой работы перед экспертной комиссией. Главным экспонатом стала воссозданная рама XVIII века, напечатанная на композитном 3D-принтере. Комиссия отметила высокую социальную значимость проекта для сохранения культурных ценностей.</p>
-            </div>
+    <nav>
+        <a href="index.html">Главная</a> <a href="about.html">О проекте</a> <a href="team.html">Участники</a> <a href="journal.html">Журнал</a> <a href="resources.html">Ресурсы</a>
+    </nav>
+    <div class="container">
+        <h1 style="color: var(--gold);">Журнал событий</h1>
+
+        <div class="news-card">
+            <span class="date">15 Мая 2024</span>
+            <h2>Защита проекта на итоговой аттестации</h2>
+            <p>Кульминация года! Команда успешно представила проект экспертной комиссии. Мы продемонстрировали напечатанную на 3D-принтере копию барочной рамы, которая была практически неотличима от оригинала после финишной отделки. Эксперты высоко оценили точность сканирования и потенциал метода для музейного дела.</p>
         </div>
 
-        <div class="card mb-4">
-            <div class="card-body">
-                <h5>Полевой выезд: от сканирования до печати</h5>
-                <p class="text-muted small">Дата: Апрель 2024</p>
-                <p>Участники провели полный цикл работ: в условиях музея с помощью ручного сканера Artec Eva была оцифрована рама с поврежденным декором. В лаборатории модель была очищена от шумов, "достроена" и отправлена на печать. Эксперимент подтвердил, что 3D-печать позволяет сократить время реставрации в 5 раз.</p>
-            </div>
+        <div class="news-card">
+            <span class="date">20 Апреля 2024</span>
+            <h2>От сканирования к печати</h2>
+            <p>После визита в музей мы приступили к технической части. Использовался профессиональный сканер для захвата сложной резьбы. Участники провели 48 часов за обработкой «шумов» в моделях, чтобы подготовить файлы к 3D-печати. Результат — идеальная стыковка новых элементов со старой основой рамы.</p>
         </div>
 
-        <div class="card mb-4">
-            <div class="card-body">
-                <h5>Визит в Третьяковскую галерею</h5>
-                <p class="text-muted small">Дата: Март 2024</p>
-                <p>Команда под руководством Петухова И.С. посетила запасники галереи. Мы изучили особенности барочных и классицистических рам, проконсультировались с ведущими реставраторами Москвы о том, какие именно элементы чаще всего подвергаются разрушению и требуют цифрового архивирования.</p>
-            </div>
+        <div class="news-card">
+            <span class="date">10 Марта 2024</span>
+            <h2>Экспедиция: Старинные рамы Москвы</h2>
+            <p>Участники проекта посетили запасники музеев, чтобы изучить старинные рамы. Мы детально рассмотрели технологию золочения и резьбы XVIII-XIX веков. Это помогло нам понять, как именно свет ложится на грани рамы, чтобы правильно настроить параметры сканера для захвата мельчайших теней.</p>
         </div>
     </div>
 </body>
