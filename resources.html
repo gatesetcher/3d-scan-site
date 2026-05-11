@@ -2,26 +2,48 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ресурсы | 3D Рамы</title>
-    <link href="https://jsdelivr.net" rel="stylesheet">
+    <style>
+        :root { --gold: #c5a059; --dark: #121212; --card: #1e1e1e; --text: #e0e0e0; }
+        body { background-color: var(--dark); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; }
+        nav { background: #000; padding: 15px; text-align: center; border-bottom: 2px solid var(--gold); position: sticky; top: 0; z-index: 100; }
+        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: bold; }
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .res-link { background: var(--card); display: block; padding: 20px; margin-bottom: 15px; border-radius: 10px; text-decoration: none; color: var(--text); border: 1px solid #333; transition: 0.3s; }
+        .res-link:hover { border-color: var(--gold); background: #252525; transform: translateX(10px); }
+        .res-link strong { color: var(--gold); display: block; font-size: 1.2rem; margin-bottom: 5px; }
+        .phone { color: #888; font-size: 0.9rem; }
+    </style>
 </head>
 <body>
-    <div class="container my-5">
-        <h1>Полезные ресурсы</h1>
-        <div class="list-group mt-4">
-            <a href="https://tretyakovgallery.ru" class="list-group-item list-group-item-action">
-                <strong>Третьяковская галерея</strong> — Официальный сайт (+7 495 957-07-27)
-            </a>
-            <a href="https://ca-moscow.com" class="list-group-item list-group-item-action">
-                <strong>Центр Искусств Москва</strong> — Пространство для вдохновения (+7 495 252-00-35)
-            </a>
-            <a href="#" class="list-group-item list-group-item-action">
-                <strong>3D-Today</strong> — Портал о 3D-печати и сканировании (статьи, форумы)
-            </a>
-            <a href="#" class="list-group-item list-group-item-action">
-                <strong>Artec 3D</strong> — Лидеры рынка профессиональных 3D-сканеров
-            </a>
-        </div>
+    <nav>
+        <a href="index.html">Главная</a> <a href="about.html">О проекте</a> <a href="team.html">Участники</a> <a href="journal.html">Журнал</a> <a href="resources.html">Ресурсы</a>
+    </nav>
+    <div class="container">
+        <h1 style="color: var(--gold);">Полезные материалы</h1>
+        
+        <a href="https://tretyakovgallery.ru" class="res-link" target="_blank">
+            <strong>Государственная Третьяковская галерея</strong>
+            Информация о собрании рам и методах консервации.
+            <span class="phone">Телефон: +7 (495) 957-07-27</span>
+        </a>
+
+        <a href="https://ca-moscow.com" class="res-link" target="_blank">
+            <strong>Центр Искусств. Москва</strong>
+            Площадка для изучения классического и современного искусства.
+            <span class="phone">Телефон: +7 (495) 252-00-35</span>
+        </a>
+
+        <a href="https://3dtoday.ru" class="res-link" target="_blank">
+            <strong>Портал 3D-Today</strong>
+            Крупнейшее сообщество по 3D-печати и сканированию в РФ.
+        </a>
+
+        <a href="https://artec3d.com" class="res-link" target="_blank">
+            <strong>Технологии Artec 3D</strong>
+            Обучающие материалы по профессиональному 3D-сканированию.
+        </a>
     </div>
 </body>
 </html>
