@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <title>Журнал | 3D Рамы</title>
     <style>
-        /* Стили те же, что и выше */
-        :root { --gold: #c5a059; --dark: #121212; --card: #1e1e1e; --text: #e0e0e0; }
+        :root { --gold: #c5a059; --dark: #0a0a0a; --card: #161616; --text: #e0e0e0; }
         body { background-color: var(--dark); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; }
-        nav { background: #000; padding: 15px; text-align: center; border-bottom: 2px solid var(--gold); }
-        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: bold; }
-        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
-        .news-card { background: var(--card); margin-bottom: 30px; padding: 25px; border-radius: 15px; border: 1px solid #333; position: relative; overflow: hidden; }
-        .news-card::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: var(--gold); }
-        .date { color: var(--gold); font-size: 0.9rem; margin-bottom: 10px; display: block; }
-        h2 { margin-top: 0; color: #fff; }
+        nav { background: #000; padding: 20px; text-align: center; border-bottom: 2px solid var(--gold); }
+        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .news { background: var(--card); padding: 25px; border-radius: 15px; margin-bottom: 30px; border-left: 5px solid var(--gold); }
+        .date { color: var(--gold); font-size: 0.8rem; }
+        h2 { margin: 10px 0; }
+        .site-footer { background: #000; color: #888; padding: 40px 20px; margin-top: 60px; border-top: 1px solid var(--gold); text-align: center; }
     </style>
 </head>
 <body>
@@ -21,25 +20,26 @@
         <a href="index.html">Главная</a> <a href="about.html">О проекте</a> <a href="team.html">Участники</a> <a href="journal.html">Журнал</a> <a href="resources.html">Ресурсы</a>
     </nav>
     <div class="container">
-        <h1 style="color: var(--gold);">Журнал событий</h1>
-
-        <div class="news-card">
-            <span class="date">15 Мая 2024</span>
-            <h2>Защита проекта на итоговой аттестации</h2>
-            <p>Кульминация года! Команда успешно представила проект экспертной комиссии. Мы продемонстрировали напечатанную на 3D-принтере копию барочной рамы, которая была практически неотличима от оригинала после финишной отделки. Эксперты высоко оценили точность сканирования и потенциал метода для музейного дела.</p>
+        <h1>Журнал проекта</h1>
+        <div class="news">
+            <span class="date">МАЙ 2024</span>
+            <h2>Защита проекта</h2>
+            <p>Мы успешно защитили проект на итоговой аттестации. Была представлена полностью восстановленная рама, созданная с помощью 3D-печати на основе высокоточного скана.</p>
         </div>
-
-        <div class="news-card">
-            <span class="date">20 Апреля 2024</span>
-            <h2>От сканирования к печати</h2>
-            <p>После визита в музей мы приступили к технической части. Использовался профессиональный сканер для захвата сложной резьбы. Участники провели 48 часов за обработкой «шумов» в моделях, чтобы подготовить файлы к 3D-печати. Результат — идеальная стыковка новых элементов со старой основой рамы.</p>
+        <div class="news">
+            <span class="date">АПРЕЛЬ 2024</span>
+            <h2>От скана к печати</h2>
+            <p>Участники отсканировали старинную раму. После обработки облака точек, модель была адаптирована для 3D-принтера, что позволило воссоздать сложнейший рельеф.</p>
         </div>
-
-        <div class="news-card">
-            <span class="date">10 Марта 2024</span>
-            <h2>Экспедиция: Старинные рамы Москвы</h2>
-            <p>Участники проекта посетили запасники музеев, чтобы изучить старинные рамы. Мы детально рассмотрели технологию золочения и резьбы XVIII-XIX веков. Это помогло нам понять, как именно свет ложится на грани рамы, чтобы правильно настроить параметры сканера для захвата мельчайших теней.</p>
+        <div class="news">
+            <span class="date">МАРТ 2024</span>
+            <h2>Поход в музей</h2>
+            <p>Команда посетила музей, где изучила старинные рамы. Мы проанализировали технику резьбы, чтобы правильно настроить параметры сканирования для захвата мельчайших деталей.</p>
         </div>
     </div>
+    <footer class="site-footer">
+        <p>Московский политехнический университет</p>
+        <p>Б. Семёновская, 38 | mospolytech.ru</p>
+    </footer>
 </body>
 </html>
