@@ -1,27 +1,34 @@
-html<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>О проекте | 3D Рамы</title>
-    <link href="https://jsdelivr.net" rel="stylesheet">
+    <style>
+        /* Скопируйте стили <style> из index.html сюда для единообразия */
+        :root { --gold: #c5a059; --dark: #121212; --card: #1e1e1e; --text: #e0e0e0; }
+        body { background-color: var(--dark); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; }
+        nav { background: #000; padding: 15px; text-align: center; border-bottom: 2px solid var(--gold); position: sticky; top: 0; }
+        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: bold; }
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .section { background: var(--card); padding: 30px; border-radius: 15px; border-left: 5px solid var(--gold); }
+        h1, h2 { color: var(--gold); }
+        .highlight { color: var(--gold); font-weight: bold; }
+    </style>
 </head>
 <body>
-    <!-- Навигация аналогична index.html -->
-    <div class="container my-5">
-        <h1>Проблематика и новизна</h1>
-        <div class="row mt-4">
-            <div class="col-md-8">
-                <p><strong>Проблема:</strong> Со временем деревянные рамы разрушаются, а классическая реставрация — процесс долгий и дорогостоящий. Часто уникальный рельеф утрачивается навсегда.</p>
-                <p><strong>Новизна:</strong> Мы предлагаем бесконтактный метод фиксации геометрии. 3D-сканирование позволяет получить облако точек объекта, не повреждая хрупкую позолоту или лепнину.</p>
-                <div class="alert alert-info">
-                    <strong>Главная задача:</strong> Сохранение истории, которую несет в себе каждая трещина и узор рамы. Мы не просто копируем форму, мы консервируем время.
-                </div>
+    <nav>
+        <a href="index.html">Главная</a> <a href="about.html">О проекте</a> <a href="team.html">Участники</a> <a href="journal.html">Журнал</a> <a href="resources.html">Ресурсы</a>
+    </nav>
+    <div class="container">
+        <div class="section">
+            <h1>Проблематика и новизна</h1>
+            <p>Главная проблема классической реставрации — её инвазивность и риск повреждения оригинала. Наш метод <span class="highlight">3D-сканирования</span> является бесконтактным, что гарантирует безопасность объекта.</p>
+            <p><span class="highlight">Новизна</span> заключается в создании «Цифрового Архива Рам», который позволяет напечатать утраченный фрагмент на 3D-принтере с идеальной точностью.</p>
+            <div style="background: #252525; padding: 20px; border-radius: 10px; margin-top: 20px;">
+                <strong>Миссия:</strong> Сохранение истории, которую несет в себе каждая рама. Мы консервируем не просто форму, а дух эпохи.
             </div>
-            <div class="col-md-4">
-                <img src="https://unsplash.com" class="img-fluid rounded" alt="3D Scan">
-            </div>
+            <img src="https://unsplash.com" alt="Технологии">
         </div>
     </div>
 </body>
 </html>
-
