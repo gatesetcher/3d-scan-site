@@ -2,42 +2,186 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Участники | 3D Рамы</title>
     <style>
         :root { --gold: #c5a059; --dark: #0a0a0a; --card: #161616; --text: #e0e0e0; }
         body { background-color: var(--dark); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; }
-        nav { background: #000; padding: 20px; text-align: center; border-bottom: 2px solid var(--gold); }
-        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-        .leader { background: var(--card); border: 2px solid var(--gold); padding: 30px; border-radius: 15px; text-align: center; margin-bottom: 30px; }
-        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { background: var(--card); padding: 20px; border-radius: 10px; border-bottom: 3px solid var(--gold); }
-        h3 { color: var(--gold); margin: 0; }
-        .site-footer { background: #000; color: #888; padding: 40px 20px; margin-top: 60px; border-top: 1px solid var(--gold); text-align: center; }
+        
+        /* Шапка */
+        nav { background: #000; padding: 20px; text-align: center; border-bottom: 2px solid var(--gold); position: sticky; top: 0; z-index: 100; }
+        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; transition: 0.3s; }
+        nav a:hover { color: var(--gold); }
+
+        .container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
+        h1 { color: var(--gold); text-align: center; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Блок руководителя */
+        .leader-section {
+            background: linear-gradient(45deg, #1a1a1a, #000);
+            border: 2px solid var(--gold);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 60px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+        }
+        .leader-section h2 { color: var(--gold); margin: 0; font-size: 1rem; text-transform: uppercase; }
+        .leader-section h1 { color: #fff; margin: 15px 0; font-size: 2.5rem; letter-spacing: 0; }
+        .leader-section p { color: #888; font-style: italic; }
+
+        /* Сетка участников */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .team-card {
+            background: var(--card);
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 25px;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(197, 160, 89, 0.1);
+        }
+
+        .team-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 4px; height: 100%;
+            background: var(--gold);
+        }
+
+        .group-title {
+            color: var(--gold);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .group-title span { margin-right: 10px; font-size: 1.5rem; }
+
+        .member-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: #fff;
+            line-height: 1.8;
+        }
+
+        .contribution {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        /* Подвал */
+        .site-footer { background: #000; color: #888; padding: 40px 20px; margin-top: 80px; border-top: 1px solid var(--gold); text-align: center; }
+        .site-footer a { color: var(--gold); text-decoration: none; }
     </style>
 </head>
 <body>
+
     <nav>
-        <a href="index.html">Главная</a> <a href="about.html">О проекте</a> <a href="team.html">Участники</a> <a href="journal.html">Журнал</a> <a href="resources.html">Ресурсы</a>
+        <a href="index.html">Главная</a>
+        <a href="about.html">О проекте</a>
+        <a href="team.html" style="color: var(--gold);">Участники</a>
+        <a href="journal.html">Журнал</a>
+        <a href="resources.html">Ресурсы</a>
     </nav>
+
     <div class="container">
-        <div class="leader">
-            <h3>Руководитель проекта</h3>
-            <h1 style="color:#fff;">Петухов Иван Сергеевич</h1>
-            <p>Научное руководство и координация групп</p>
+        <h1>Команда проекта</h1>
+
+        <!-- Руководитель -->
+        <div class="leader-section">
+            <h2>Руководитель проекта</h2>
+            <h1>Петухов Иван Сергеевич</h1>
+            <p>Инициатор исследования, методология сохранения культурного наследия и общая координация групп.</p>
         </div>
+
         <div class="team-grid">
-            <div class="card"><h3>Инженеры</h3><p>Варламов Е.М., Герасимова Т.Д., Дойков Ф.В., Ермаков М.А.</p></div>
-            <div class="card"><h3>Моделлеры</h3><p>Зайцев А.И., Каюмова К.З., Котов Н.Д., Куранов Н.В., Лобанов Н.Е.</p></div>
-            <div class="card"><h3>Технологи</h3><p>Мальцева В.А., Маммаев М.Ш., Миронова С.А., Мурушкин А.Э., Николаев М.А.</p></div>
-            <div class="card"><h3>Искусствоведы</h3><p>Пермина Д.С., Пирметова Д.Д., Полевая Е.С., Татаринов В.А.</p></div>
-            <div class="card"><h3>Сборка</h3><p>Фирсов А.П., Шевцов С.П., Яковлев З.А.</p></div>
+            <!-- Группа 1 -->
+            <div class="team-card">
+                <div class="group-title"><span>🔍</span> Группа сканирования</div>
+                <ul class="member-list">
+                    <li>Варламов Е.М.</li>
+                    <li>Герасимова Т.Д.</li>
+                    <li>Дойков Ф.В.</li>
+                    <li>Ермаков М.А.</li>
+                </ul>
+                <p class="contribution"><strong>Вклад:</strong> Полевые работы в музеях, калибровка оборудования и высокоточный захват геометрии рам.</p>
+            </div>
+
+            <!-- Группа 2 -->
+            <div class="team-card">
+                <div class="group-title"><span>💻</span> Цифровая реставрация</div>
+                <ul class="member-list">
+                    <li>Зайцев А.И.</li>
+                    <li>Каюмова К.З.</li>
+                    <li>Котов Н.Д.</li>
+                    <li>Куранов Н.В.</li>
+                    <li>Лобанов Н.Е.</li>
+                </ul>
+                <p class="contribution"><strong>Вклад:</strong> Обработка облака точек, устранение дефектов сканирования и 3D-моделирование утраченных элементов.</p>
+            </div>
+
+            <!-- Группа 3 -->
+            <div class="team-card">
+                <div class="group-title"><span>🖨️</span> Аддитивные технологии</div>
+                <ul class="member-list">
+                    <li>Мальцева В.А.</li>
+                    <li>Маммаев М.Ш.</li>
+                    <li>Миронова С.А.</li>
+                    <li>Мурушкин А.Э.</li>
+                    <li>Николаев М.А.</li>
+                </ul>
+                <p class="contribution"><strong>Вклад:</strong> Подготовка моделей к печати, работа с полимерами и контроль процесса 3D-печати прототипов.</p>
+            </div>
+
+            <!-- Группа 4 -->
+            <div class="team-card">
+                <div class="group-title"><span>📜</span> Исследователи</div>
+                <ul class="member-list">
+                    <li>Пермина Д.С.</li>
+                    <li>Пирметова Д.Д.</li>
+                    <li>Полевая Е.С.</li>
+                    <li>Татаринов В.А.</li>
+                </ul>
+                <p class="contribution"><strong>Вклад:</strong> Изучение проблематики, работа с музейными архивами и обоснование исторической ценности объектов.</p>
+            </div>
+
+            <!-- Группа 5 -->
+            <div class="team-card">
+                <div class="group-title"><span>🔨</span> Мастера финиша</div>
+                <ul class="member-list">
+                    <li>Фирсов А.П.</li>
+                    <li>Шевцов С.П.</li>
+                    <li>Яковлев З.А.</li>
+                </ul>
+                <p class="contribution"><strong>Вклад:</strong> Постобработка напечатанных изделий, имитация старинного покрытия и финальная сборка рам.</p>
+            </div>
         </div>
     </div>
+
     <footer class="site-footer">
         <p>Московский политехнический университет</p>
-        <p>+7 (495) 223-05-23 | mospolytech.ru</p>
+        <p>📍 Б. Семёновская, 38 | 📞 <a href="tel:+74952230523">+7 (495) 223-05-23</a></p>
+        <p><a href="mailto:mospolytech@mospolytech.ru">mospolytech@mospolytech.ru</a></p>
     </footer>
+
 </body>
 </html>
-
