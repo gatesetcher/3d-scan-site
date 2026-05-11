@@ -2,155 +2,32 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ресурсы | 3D Рамы</title>
     <style>
         :root { --gold: #c5a059; --dark: #0a0a0a; --card: #161616; --text: #e0e0e0; }
         body { background-color: var(--dark); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; }
-        
-        /* Навигация (такая же, как на других страницах) */
-        nav { background: #000; padding: 20px; text-align: center; border-bottom: 2px solid var(--gold); position: sticky; top: 0; z-index: 100; }
-        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: bold; transition: 0.3s; text-transform: uppercase; font-size: 0.9rem; }
-        nav a:hover { color: var(--gold); }
-
-        .container { max-width: 800px; margin: 50px auto; padding: 0 20px; }
-        h1 { color: var(--gold); text-align: center; margin-bottom: 40px; font-size: 2.5rem; }
-
-        /* Стиль кнопок-ресурсов */
-        .res-button {
-            display: flex;
-            align-items: center;
-            background: var(--card);
-            border: 1px solid #333;
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 20px;
-            text-decoration: none;
-            color: var(--text);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .res-button:hover {
-            border-color: var(--gold);
-            transform: scale(1.03);
-            box-shadow: 0 10px 30px rgba(197, 160, 89, 0.2);
-            background: #1e1e1e;
-        }
-
-        .icon-box {
-            width: 60px;
-            height: 60px;
-            background: rgba(197, 160, 89, 0.1);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            flex-shrink: 0;
-            transition: 0.3s;
-        }
-
-        .res-button:hover .icon-box {
-            background: var(--gold);
-        }
-
-        .icon-box svg {
-            width: 30px;
-            height: 30px;
-            fill: var(--gold);
-            transition: 0.3s;
-        }
-
-        .res-button:hover .icon-box svg {
-            fill: #000;
-        }
-
-        .res-info strong {
-            display: block;
-            font-size: 1.2rem;
-            color: #fff;
-            margin-bottom: 5px;
-        }
-
-        .res-info p {
-            margin: 0;
-            font-size: 0.9rem;
-            color: #888;
-        }
-
-        .phone-tag {
-            display: inline-block;
-            margin-top: 8px;
-            font-size: 0.8rem;
-            color: var(--gold);
-            border: 1px solid var(--gold);
-            padding: 2px 8px;
-            border-radius: 5px;
-        }
+        nav { background: #000; padding: 20px; text-align: center; border-bottom: 2px solid var(--gold); }
+        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        .res-btn { display: flex; align-items: center; background: var(--card); padding: 20px; border-radius: 15px; margin-bottom: 15px; text-decoration: none; color: #fff; border: 1px solid #333; transition: 0.3s; }
+        .res-btn:hover { border-color: var(--gold); transform: translateX(10px); }
+        .icon { font-size: 1.5rem; margin-right: 20px; color: var(--gold); }
+        .site-footer { background: #000; color: #888; padding: 40px 20px; margin-top: 60px; border-top: 1px solid var(--gold); text-align: center; }
     </style>
 </head>
 <body>
-
     <nav>
-        <a href="index.html">Главная</a>
-        <a href="about.html">О проекте</a>
-        <a href="team.html">Участники</a>
-        <a href="journal.html">Журнал</a>
-        <a href="resources.html" style="color: var(--gold);">Ресурсы</a>
+        <a href="index.html">Главная</a> <a href="about.html">О проекте</a> <a href="team.html">Участники</a> <a href="journal.html">Журнал</a> <a href="resources.html">Ресурсы</a>
     </nav>
-
     <div class="container">
         <h1>Полезные ресурсы</h1>
-
-        <!-- Третьяковская галерея -->
-        <a href="https://tretyakovgallery.ru" class="res-button" target="_blank">
-            <div class="icon-box">
-                <svg viewBox="0 0 24 24"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18l8 4v7.64l-8 4-8-4V8.18l8-4zM12 7a3 3 0 100 6 3 3 0 000-6z"/></svg>
-            </div>
-            <div class="res-info">
-                <strong>Третьяковская галерея</strong>
-                <p>Главный музей национального искусства России.</p>
-                <span class="phone-tag">+7 (495) 957-07-27</span>
-            </div>
-        </a>
-
-        <!-- Центр Искусств Москва -->
-        <a href="https://ca-moscow.com" class="res-button" target="_blank">
-            <div class="icon-box">
-                <svg viewBox="0 0 24 24"><path d="M21 7L9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7z"/></svg>
-            </div>
-            <div class="res-info">
-                <strong>Центр Искусств. Москва</strong>
-                <p>Выставки старинной живописи и частных коллекций.</p>
-                <span class="phone-tag">+7 (495) 252-00-35</span>
-            </div>
-        </a>
-
-        <!-- 3D Today -->
-        <a href="https://3dtoday.ru" class="res-button" target="_blank">
-            <div class="icon-box">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
-            </div>
-            <div class="res-info">
-                <strong>Портал 3D Today</strong>
-                <p>База знаний по 3D-печати и моделированию.</p>
-            </div>
-        </a>
-
-        <!-- Профессиональные сканеры -->
-        <a href="https://artec3d.com" class="res-button" target="_blank">
-            <div class="icon-box">
-                <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9v8l10-12h-9l1-8z"/></svg>
-            </div>
-            <div class="res-info">
-                <strong>Artec 3D</strong>
-                <p>Технологии промышленного и музейного сканирования.</p>
-            </div>
-        </a>
-
+        <a href="https://tretyakovgallery.ru" class="res-btn"><span class="icon">🏛️</span><div><strong>Третьяковская галерея</strong><br><small>+7 (495) 957-07-27</small></div></a>
+        <a href="https://ca-moscow.com" class="res-btn"><span class="icon">🎨</span><div><strong>Центр Искусств Москва</strong><br><small>+7 (495) 252-00-35</small></div></a>
+        <a href="https://3dtoday.ru" class="res-btn"><span class="icon">⚙️</span><div><strong>3D Today</strong><br>База знаний по 3D</div></a>
     </div>
-
+    <footer class="site-footer">
+        <p>Московский политехнический университет</p>
+        <p>mospolytech.ru</p>
+    </footer>
 </body>
 </html>
