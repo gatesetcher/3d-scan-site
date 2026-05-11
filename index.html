@@ -2,42 +2,42 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Рамы | Главная</title>
-    <link href="https://jsdelivr.net" rel="stylesheet">
     <style>
-        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://unsplash.com'); background-size: cover; color: white; padding: 100px 0; }
+        :root { --gold: #c5a059; --dark: #121212; --card: #1e1e1e; --text: #e0e0e0; }
+        body { background-color: var(--dark); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; }
+        nav { background: #000; padding: 15px; text-align: center; border-bottom: 2px solid var(--gold); position: sticky; top: 0; z-index: 100; }
+        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: bold; transition: 0.3s; }
+        nav a:hover { color: var(--gold); }
+        .hero { height: 400px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://unsplash.com'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-bottom: 3px solid var(--gold); }
+        .hero h1 { color: var(--gold); font-size: 2.5rem; margin-bottom: 10px; }
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .section { background: var(--card); padding: 30px; border-radius: 15px; border-left: 5px solid var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        h2 { color: var(--gold); }
+        img { max-width: 100%; border-radius: 10px; margin-top: 20px; filter: grayscale(30%) contrast(1.1); border: 1px solid #333; }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">3D-History</a>
-            <div class="navbar-nav">
-                <a class="nav-link active" href="index.html">Главная</a>
-                <a class="nav-link" href="about.html">О проекте</a>
-                <a class="nav-link" href="team.html">Участники</a>
-                <a class="nav-link" href="journal.html">Журнал</a>
-                <a class="nav-link" href="resources.html">Ресурсы</a>
-            </div>
-        </div>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="about.html">О проекте</a>
+        <a href="team.html">Участники</a>
+        <a href="journal.html">Журнал</a>
+        <a href="resources.html">Ресурсы</a>
     </nav>
-
-    <header class="hero text-center">
-        <h1>Проектирование и изготовление рам с использованием 3D-сканирования</h1>
-        <p class="lead">Сохранение культурного наследия через цифровые технологии</p>
+    <header class="hero">
+        <h1>Проектирование и изготовление рам</h1>
+        <p>Сохранение истории с помощью 3D-технологий</p>
     </header>
-
-    <div class="container my-5">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <h2>Аннотация проекта</h2>
-                <p>Наш проект посвящен интеграции передовых технологий 3D-сканирования в искусствоведение. Мы создаем точные цифровые двойники старинных рам, которые являются не просто обрамлением, а частью истории искусства. Использование 3D-печати позволяет воссоздавать утраченные элементы с точностью до микрона.</p>
-            </div>
-            <div class="col-md-6">
-                <img src="https://unsplash.com" class="img-fluid rounded shadow" alt="Искусство">
-            </div>
+    <div class="container">
+        <div class="section">
+            <h2>Аннотация проекта</h2>
+            <p>Наш проект объединяет классическое искусство и современные технологии. Мы создаем высокоточные цифровые копии музейных рам, сохраняя каждую деталь их рельефа для будущих поколений. Использование 3D-сканирования позволяет избежать физического контакта с хрупкими экспонатами.</p>
+            <img src="https://unsplash.com" alt="Искусство">
         </div>
     </div>
 </body>
+</html>
 </html>
 
