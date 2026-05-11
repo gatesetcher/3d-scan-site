@@ -2,60 +2,57 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Участники | 3D Рамы</title>
-    <link href="https://jsdelivr.net" rel="stylesheet">
+    <style>
+        :root { --gold: #c5a059; --dark: #121212; --card: #1e1e1e; --text: #e0e0e0; }
+        body { background-color: var(--dark); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; }
+        nav { background: #000; padding: 15px; text-align: center; border-bottom: 2px solid var(--gold); position: sticky; top: 0; z-index: 100; }
+        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: bold; }
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        .leader-box { background: linear-gradient(45deg, #1e1e1e, #2c2c2c); padding: 30px; border-radius: 15px; border: 2px solid var(--gold); text-align: center; margin-bottom: 40px; }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .member-card { background: var(--card); padding: 20px; border-radius: 10px; border-bottom: 3px solid var(--gold); }
+        .member-card h3 { color: var(--gold); margin-top: 0; font-size: 1.1rem; }
+        .role { font-style: italic; color: #888; font-size: 0.9rem; margin-bottom: 10px; display: block; }
+    </style>
 </head>
 <body>
-    <div class="container my-5">
-        <h1 class="text-center mb-5">Наша Команда</h1>
-        <h3 class="text-primary">Руководитель: Петухов Иван Сергеевич</h3>
-        
-        <div class="row g-4 mt-3">
-            <!-- Пример блока участников -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Группа инженеров 3D-сканирования</h5>
-                        <p class="card-text text-muted small">Варламов Е.М., Герасимова Т.Д., Дойков Ф.В., Ермаков М.А.</p>
-                        <p><strong>Вклад:</strong> Полевые работы в музеях, настройка оборудования и первичная обработка облака точек.</p>
-                    </div>
-                </div>
+    <nav>
+        <a href="index.html">Главная</a> <a href="about.html">О проекте</a> <a href="team.html">Участники</a> <a href="journal.html">Журнал</a> <a href="resources.html">Ресурсы</a>
+    </nav>
+    <div class="container">
+        <div class="leader-box">
+            <h2 style="color: var(--gold); margin: 0;">Руководитель проекта</h2>
+            <h1 style="margin: 10px 0;">Петухов Иван Сергеевич</h1>
+            <p>Координация работы групп, методология сканирования и научное руководство.</p>
+        </div>
+
+        <div class="team-grid">
+            <div class="member-card">
+                <h3>Группа инженеров</h3>
+                <span class="role">Варламов Е.М., Герасимова Т.Д., Дойков Ф.В., Ермаков М.А.</span>
+                <p>Ответственные за полевые выезды, настройку 3D-сканеров и захват геометрии объектов.</p>
             </div>
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">3D-моделлеры и реставраторы</h5>
-                        <p class="card-text text-muted small">Зайцев А.И., Каюмова К.З., Котов Н.Д., Куранов Н.В., Лобанов Н.Е.</p>
-                        <p><strong>Вклад:</strong> Цифровая реставрация поврежденных элементов рам в CAD-программах.</p>
-                    </div>
-                </div>
+            <div class="member-card">
+                <h3>Группа 3D-моделирования</h3>
+                <span class="role">Зайцев А.И., Каюмова К.З., Котов Н.Д., Куранов Н.В., Лобанов Н.Е.</span>
+                <p>Цифровая реставрация: очистка сканов, восстановление утраченных узоров в ZBrush и CAD.</p>
             </div>
-             <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Технологи 3D-печати</h5>
-                        <p class="card-text text-muted small">Мальцева В.А., Маммаев М.Ш., Миронова С.А., Мурушкин А.Э., Николаев М.А.</p>
-                        <p><strong>Вклад:</strong> Подбор материалов (полимеры, имитирующие дерево) и подготовка моделей к печати.</p>
-                    </div>
-                </div>
+            <div class="member-card">
+                <h3>Группа аддитивных технологий</h3>
+                <span class="role">Мальцева В.А., Маммаев М.Ш., Миронова С.А., Мурушкин А.Э., Николаев М.А.</span>
+                <p>Подготовка моделей к печати, выбор полимеров и контроль работы 3D-принтеров.</p>
             </div>
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Искусствоведы и аналитики</h5>
-                        <p class="card-text text-muted small">Пермина Д.С., Пирметова Д.Д., Полевая Е.С., Татаринов В.А.</p>
-                        <p><strong>Вклад:</strong> Исследование исторического контекста рам и работа с архивными данными Третьяковской галереи.</p>
-                    </div>
-                </div>
+            <div class="member-card">
+                <h3>Группа искусствоведения</h3>
+                <span class="role">Пермина Д.С., Пирметова Д.Д., Полевая Е.С., Татаринов В.А.</span>
+                <p>Анализ исторической ценности рам, работа с архивами и музейными кураторами.</p>
             </div>
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Группа финальной сборки</h5>
-                        <p class="card-text text-muted small">Фирсов А.П., Шевцов С.П., Яковлев З.А.</p>
-                        <p><strong>Вклад:</strong> Постобработка напечатанных изделий, финишная отделка и монтаж.</p>
-                    </div>
-                </div>
+            <div class="member-card">
+                <h3>Группа постобработки</h3>
+                <span class="role">Фирсов А.П., Шевцов С.П., Яковлев З.А.</span>
+                <p>Финишная отделка напечатанных рам: шлифовка, имитация позолоты и сборка готовых изделий.</p>
             </div>
         </div>
     </div>
