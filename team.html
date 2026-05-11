@@ -4,34 +4,16 @@
     <meta charset="UTF-8">
     <title>Участники | 3D Рамы</title>
     <style>
-        :root { --gold: #c5a059; --dark: #0a0a0a; --card: #1a1a1a; --text: #e0e0e0; }
-        body { background-color: var(--dark); color: var(--text); font-family: sans-serif; margin: 0; }
+        :root { --gold: #c5a059; --dark: #0a0a0a; --card: #161616; --text: #e0e0e0; }
+        body { background-color: var(--dark); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; }
         nav { background: #000; padding: 20px; text-align: center; border-bottom: 2px solid var(--gold); }
-        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: bold; }
+        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
         .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-        
-        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .member-card { 
-            background: var(--card); 
-            border: 1px solid #333; 
-            border-radius: 15px; 
-            padding: 20px; 
-            text-align: center;
-            transition: 0.3s;
-        }
-        .member-card:hover { border-color: var(--gold); transform: translateY(-5px); }
-        
-        /* Визуальная заглушка для фото */
-        .photo-placeholder {
-            width: 100px; height: 100px;
-            background: linear-gradient(45deg, #222, var(--gold));
-            border-radius: 50%;
-            margin: 0 auto 15px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 2rem; color: white; border: 2px solid var(--gold);
-        }
-        h3 { color: var(--gold); margin-bottom: 5px; }
-        .role { color: #888; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+        .leader { background: var(--card); border: 2px solid var(--gold); padding: 30px; border-radius: 15px; text-align: center; margin-bottom: 30px; }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: var(--card); padding: 20px; border-radius: 10px; border-bottom: 3px solid var(--gold); }
+        h3 { color: var(--gold); margin: 0; }
+        .site-footer { background: #000; color: #888; padding: 40px 20px; margin-top: 60px; border-top: 1px solid var(--gold); text-align: center; }
     </style>
 </head>
 <body>
@@ -39,28 +21,22 @@
         <a href="index.html">Главная</a> <a href="about.html">О проекте</a> <a href="team.html">Участники</a> <a href="journal.html">Журнал</a> <a href="resources.html">Ресурсы</a>
     </nav>
     <div class="container">
-        <h1 style="text-align: center; color: var(--gold); margin-bottom: 50px;">Наша Команда</h1>
-        
+        <div class="leader">
+            <h3>Руководитель проекта</h3>
+            <h1 style="color:#fff;">Петухов Иван Сергеевич</h1>
+            <p>Научное руководство и координация групп</p>
+        </div>
         <div class="team-grid">
-            <div class="member-card">
-                <div class="photo-placeholder">👨‍🏫</div>
-                <span class="role">Руководитель</span>
-                <h3>Петухов И.С.</h3>
-            </div>
-            <div class="member-card">
-                <div class="photo-placeholder">🎨</div>
-                <span class="role">Группа Искусствоведов</span>
-                <h3>Пермина Д.С., Пирметова Д.Д., Полевая Е.С.</h3>
-            </div>
-            <div class="member-card">
-                <div class="photo-placeholder">⚙️</div>
-                <span class="role">Группа Инженеров</span>
-                <h3>Варламов Е.М., Герасимова Т.Д., Дойков Ф.В.</h3>
-            </div>
-            <!-- Добавьте остальные карточки аналогично -->
+            <div class="card"><h3>Инженеры</h3><p>Варламов Е.М., Герасимова Т.Д., Дойков Ф.В., Ермаков М.А.</p></div>
+            <div class="card"><h3>Моделлеры</h3><p>Зайцев А.И., Каюмова К.З., Котов Н.Д., Куранов Н.В., Лобанов Н.Е.</p></div>
+            <div class="card"><h3>Технологи</h3><p>Мальцева В.А., Маммаев М.Ш., Миронова С.А., Мурушкин А.Э., Николаев М.А.</p></div>
+            <div class="card"><h3>Искусствоведы</h3><p>Пермина Д.С., Пирметова Д.Д., Полевая Е.С., Татаринов В.А.</p></div>
+            <div class="card"><h3>Сборка</h3><p>Фирсов А.П., Шевцов С.П., Яковлев З.А.</p></div>
         </div>
     </div>
+    <footer class="site-footer">
+        <p>Московский политехнический университет</p>
+        <p>+7 (495) 223-05-23 | mospolytech.ru</p>
+    </footer>
 </body>
 </html>
-
-
