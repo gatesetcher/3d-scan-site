@@ -2,28 +2,41 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Сканирование Будущего | Главная</title>
-    <link rel="stylesheet" href="style.css">
+    <title>3D Рамы | Главная</title>
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <style>
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://unsplash.com'); background-size: cover; color: white; padding: 100px 0; }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Главная</a>
-            <a href="about.html">О нас</a>
-            <a href="technology.html">Технологии</a>
-            <a href="services.html">Услуги</a>
-            <a href="contact.html">Контакты</a>
-        </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">3D-History</a>
+            <div class="navbar-nav">
+                <a class="nav-link active" href="index.html">Главная</a>
+                <a class="nav-link" href="about.html">О проекте</a>
+                <a class="nav-link" href="team.html">Участники</a>
+                <a class="nav-link" href="journal.html">Журнал</a>
+                <a class="nav-link" href="resources.html">Ресурсы</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero text-center">
+        <h1>Проектирование и изготовление рам с использованием 3D-сканирования</h1>
+        <p class="lead">Сохранение культурного наследия через цифровые технологии</p>
     </header>
-    <section class="hero">
-        <h1>3D Сканирование — Цифровое будущее</h1>
-        <p>Создаем точные цифровые копии физических объектов.</p>
-    </section>
-    <div class="container">
-        <h2>Добро пожаловать</h2>
-        <p>Мы предлагаем профессиональные услуги по 3D сканированию для инженерии, искусства и производства.</p>
+
+    <div class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2>Аннотация проекта</h2>
+                <p>Наш проект посвящен интеграции передовых технологий 3D-сканирования в искусствоведение. Мы создаем точные цифровые двойники старинных рам, которые являются не просто обрамлением, а частью истории искусства. Использование 3D-печати позволяет воссоздавать утраченные элементы с точностью до микрона.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="https://unsplash.com" class="img-fluid rounded shadow" alt="Искусство">
+            </div>
+        </div>
     </div>
-    <footer><p>&copy; 2026 3D Scan Company. Все права защищены.</p></footer>
 </body>
 </html>
