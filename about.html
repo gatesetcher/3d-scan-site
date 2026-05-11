@@ -2,32 +2,43 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О проекте | 3D Рамы</title>
     <style>
-        /* Скопируйте стили <style> из index.html сюда для единообразия */
         :root { --gold: #c5a059; --dark: #121212; --card: #1e1e1e; --text: #e0e0e0; }
         body { background-color: var(--dark); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; }
-        nav { background: #000; padding: 15px; text-align: center; border-bottom: 2px solid var(--gold); position: sticky; top: 0; }
-        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: bold; }
+        nav { background: #000; padding: 15px; text-align: center; border-bottom: 2px solid var(--gold); position: sticky; top: 0; z-index: 100; }
+        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: bold; transition: 0.3s; }
+        nav a:hover { color: var(--gold); }
         .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
-        .section { background: var(--card); padding: 30px; border-radius: 15px; border-left: 5px solid var(--gold); }
-        h1, h2 { color: var(--gold); }
+        .section { background: var(--card); padding: 30px; border-radius: 15px; border-left: 5px solid var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 30px; }
+        h1, h2 { color: var(--gold); margin-top: 0; }
+        p { line-height: 1.8; }
+        .img-box { text-align: center; margin-top: 20px; }
+        img { max-width: 100%; border-radius: 10px; border: 1px solid #333; }
         .highlight { color: var(--gold); font-weight: bold; }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Главная</a> <a href="about.html">О проекте</a> <a href="team.html">Участники</a> <a href="journal.html">Журнал</a> <a href="resources.html">Ресурсы</a>
+        <a href="index.html">Главная</a>
+        <a href="about.html">О проекте</a>
+        <a href="team.html">Участники</a>
+        <a href="journal.html">Журнал</a>
+        <a href="resources.html">Ресурсы</a>
     </nav>
     <div class="container">
         <div class="section">
-            <h1>Проблематика и новизна</h1>
-            <p>Главная проблема классической реставрации — её инвазивность и риск повреждения оригинала. Наш метод <span class="highlight">3D-сканирования</span> является бесконтактным, что гарантирует безопасность объекта.</p>
-            <p><span class="highlight">Новизна</span> заключается в создании «Цифрового Архива Рам», который позволяет напечатать утраченный фрагмент на 3D-принтере с идеальной точностью.</p>
-            <div style="background: #252525; padding: 20px; border-radius: 10px; margin-top: 20px;">
-                <strong>Миссия:</strong> Сохранение истории, которую несет в себе каждая рама. Мы консервируем не просто форму, а дух эпохи.
+            <h1>Миссия и Проблематика</h1>
+            <p>Картинная рама — это не просто декор, это <span class="highlight">часть культурного кода</span>. Традиционные методы реставрации часто требуют физического вмешательства, что рискованно для хрупких экспонатов.</p>
+            <p>Наш проект решает проблему долговечности. С помощью <span class="highlight">бесконтактного 3D-сканирования</span> мы создаем цифровые слепки рам с точностью до десятых долей миллиметра. Это позволяет сохранить историю объекта даже в случае его физического разрушения.</p>
+        </div>
+        <div class="section">
+            <h2>Новизна метода</h2>
+            <p>Мы используем аддитивные технологии (3D-печать) для воссоздания утраченных фрагментов лепнины. Это быстрее, дешевле и точнее, чем ручная резьба, и позволяет вернуть раме её первозданный вид, не нарушая оригинальную конструкцию.</p>
+            <div class="img-box">
+                <img src="https://unsplash.com" alt="Технологии сканирования">
             </div>
-            <img src="https://unsplash.com" alt="Технологии">
         </div>
     </div>
 </body>
