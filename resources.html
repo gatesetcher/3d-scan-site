@@ -2,32 +2,102 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ресурсы | 3D Рамы</title>
     <style>
         :root { --gold: #c5a059; --dark: #0a0a0a; --card: #161616; --text: #e0e0e0; }
         body { background-color: var(--dark); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; }
-        nav { background: #000; padding: 20px; text-align: center; border-bottom: 2px solid var(--gold); }
-        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
-        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        .res-btn { display: flex; align-items: center; background: var(--card); padding: 20px; border-radius: 15px; margin-bottom: 15px; text-decoration: none; color: #fff; border: 1px solid #333; transition: 0.3s; }
-        .res-btn:hover { border-color: var(--gold); transform: translateX(10px); }
-        .icon { font-size: 1.5rem; margin-right: 20px; color: var(--gold); }
-        .site-footer { background: #000; color: #888; padding: 40px 20px; margin-top: 60px; border-top: 1px solid var(--gold); text-align: center; }
+        
+        /* Шапка сайта */
+        nav { background: #000; padding: 20px; text-align: center; border-bottom: 2px solid var(--gold); position: sticky; top: 0; z-index: 100; }
+        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; transition: 0.3s; }
+        nav a:hover { color: var(--gold); }
+
+        .container { max-width: 800px; margin: 50px auto; padding: 0 20px; min-height: 60vh; }
+        h1 { color: var(--gold); text-align: center; margin-bottom: 40px; }
+
+        /* Стиль кнопок-ресурсов */
+        .res-btn { 
+            display: flex; 
+            align-items: center; 
+            background: var(--card); 
+            padding: 25px; 
+            border-radius: 15px; 
+            margin-bottom: 20px; 
+            text-decoration: none; 
+            color: #fff; 
+            border: 1px solid #333; 
+            transition: all 0.3s ease; 
+        }
+        
+        .res-btn:hover { 
+            border-color: var(--gold); 
+            transform: translateX(15px); 
+            box-shadow: 0 5px 20px rgba(197, 160, 89, 0.2);
+            background: #1e1e1e;
+        }
+
+        .icon { font-size: 2rem; margin-right: 25px; }
+        
+        .res-info strong { display: block; font-size: 1.3rem; color: var(--gold); margin-bottom: 5px; }
+        .res-info small { color: #888; font-size: 0.9rem; }
+
+        /* Подвал */
+        .site-footer { background: #000; color: #888; padding: 40px 20px; margin-top: 80px; border-top: 1px solid var(--gold); text-align: center; }
+        .site-footer a { color: var(--gold); text-decoration: none; }
     </style>
 </head>
 <body>
+
     <nav>
-        <a href="index.html">Главная</a> <a href="about.html">О проекте</a> <a href="team.html">Участники</a> <a href="journal.html">Журнал</a> <a href="resources.html">Ресурсы</a>
+        <a href="index.html">Главная</a>
+        <a href="about.html">О проекте</a>
+        <a href="team.html">Участники</a>
+        <a href="journal.html">Журнал</a>
+        <a href="resources.html" style="color: var(--gold);">Ресурсы</a>
     </nav>
+
     <div class="container">
         <h1>Полезные ресурсы</h1>
-        <a href="https://tretyakovgallery.ru" class="res-btn"><span class="icon">🏛️</span><div><strong>Третьяковская галерея</strong><br><small>+7 (495) 957-07-27</small></div></a>
-        <a href="https://ca-moscow.com" class="res-btn"><span class="icon">🎨</span><div><strong>Центр Искусств Москва</strong><br><small>+7 (495) 252-00-35</small></div></a>
-        <a href="https://3dtoday.ru" class="res-btn"><span class="icon">⚙️</span><div><strong>3D Today</strong><br>База знаний по 3D</div></a>
+        
+        <a href="https://tretyakovgallery.ru" class="res-btn" target="_blank">
+            <span class="icon">🏛️</span>
+            <div class="res-info">
+                <strong>Третьяковская галерея</strong>
+                <small>Официальный сайт музея. Тел: +7 (495) 957-07-27</small>
+            </div>
+        </a>
+
+        <a href="https://ca-moscow.com" class="res-btn" target="_blank">
+            <span class="icon">🎨</span>
+            <div class="res-info">
+                <strong>Центр Искусств Москва</strong>
+                <small>Выставочное пространство. Тел: +7 (495) 252-00-35</small>
+            </div>
+        </a>
+
+        <a href="https://3dtoday.ru" class="res-btn" target="_blank">
+            <span class="icon">⚙️</span>
+            <div class="res-info">
+                <strong>Портал 3D Today</strong>
+                <small>Всё о 3D-печати, сканировании и моделировании.</small>
+            </div>
+        </a>
+
+        <a href="https://mospolytech.ru" class="res-btn" target="_blank">
+            <span class="icon">🎓</span>
+            <div class="res-info">
+                <strong>Московский Политех</strong>
+                <small>Сайт нашего университета и проектной деятельности.</small>
+            </div>
+        </a>
     </div>
+
     <footer class="site-footer">
         <p>Московский политехнический университет</p>
-        <p>mospolytech.ru</p>
+        <p>📍 Б. Семёновская, 38 | 📞 <a href="tel:+74952230523">+7 (495) 223-05-23</a></p>
+        <p><a href="mailto:mospolytech@mospolytech.ru">mospolytech@mospolytech.ru</a></p>
     </footer>
+
 </body>
 </html>
