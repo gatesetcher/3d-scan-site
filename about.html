@@ -7,36 +7,49 @@
     <style>
         :root { --gold: #c5a059; --dark: #0a0a0a; --card: #161616; --text: #e0e0e0; }
         body { background-color: var(--dark); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; }
-        nav { background: #000; padding: 20px; text-align: center; border-bottom: 2px solid var(--gold); position: sticky; top: 0; }
-        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
-        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
-        .section { background: var(--card); padding: 30px; border-radius: 15px; border-left: 5px solid var(--gold); }
-        h1, h2 { color: var(--gold); }
-        .site-footer { background: #000; color: #888; padding: 40px 20px; margin-top: 60px; border-top: 1px solid var(--gold); text-align: center; }
-        .footer-section h3 { color: var(--gold); font-size: 1rem; }
-        .footer-section a { color: #888; text-decoration: none; }
+        nav { background: #000; padding: 20px; text-align: center; border-bottom: 2px solid var(--gold); position: sticky; top: 0; z-index: 100; }
+        nav a { color: var(--text); text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; }
+        
+        .container { max-width: 1000px; margin: 50px auto; padding: 0 20px; }
+        .section { background: var(--card); padding: 40px; border-radius: 15px; border-left: 5px solid var(--gold); }
+        
+        h1 { color: var(--gold); margin-bottom: 25px; }
+        p { line-height: 1.8; font-size: 1.05rem; }
+
+        /* Стили для capture2 */
+        .secondary-capture { 
+            display: block;
+            width: 100%; 
+            max-width: 800px; 
+            height: auto; 
+            margin: 30px auto; 
+            border-radius: 10px; 
+            border: 2px solid #333;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+        }
+
+        .highlight { color: var(--gold); font-weight: bold; }
+        .site-footer { background: #000; color: #888; padding: 40px 20px; margin-top: 80px; border-top: 1px solid var(--gold); text-align: center; }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Главная</a> <a href="about.html">О проекте</a> <a href="team.html">Участники</a> <a href="journal.html">Журнал</a> <a href="resources.html">Ресурсы</a>
+        <a href="index.html">Главная</a> <a href="about.html" style="color: var(--gold);">О проекте</a> <a href="team.html">Участники</a> <a href="journal.html">Журнал</a> <a href="resources.html">Ресурсы</a>
     </nav>
     <div class="container">
         <div class="section">
-            <h1>Миссия проекта</h1>
-            <p>Главная задача проекта — сохранение истории, которую несет в себе картинная рама. Новизна метода заключается в использовании бесконтактного 3D-сканирования, что позволяет воссоздать утраченные элементы без вреда для оригинала.</p>
-            <img src="img/about-scanner.jpg" style="width:100%; border-radius:10px; margin-top:20px;" alt="Сканирование">
+            <h1>Проблематика и новизна</h1>
+            <p>Главной задачей проекта является <span class="highlight">сохранение истории</span>, которую несет в себе картинная рама. Каждый узор и трещина — это летопись времени, которую мы переводим в цифровой формат.</p>
+            
+            <!-- Ваше изображение capture2 -->
+            <img src="capture2.jpg" class="secondary-capture" alt="Процесс проектирования">
+
+            <p>Новизна метода заключается в интеграции высокоточного сканирования в процесс реставрации. Это позволяет не только изучать объект, но и с безупречной точностью проектировать недостающие элементы декора для их последующего изготовления.</p>
         </div>
     </div>
     <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Московский Политех</h3>
-                <p>📍 г. Москва, ул. Б. Семёновская, 38</p>
-                <p>✉️ mospolytech@mospolytech.ru</p>
-            </div>
-        </div>
+        <p>Московский политехнический университет</p>
+        <p>mospolytech.ru | 2024</p>
     </footer>
 </body>
 </html>
-
